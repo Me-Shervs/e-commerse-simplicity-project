@@ -72,7 +72,7 @@ clearBtn.addEventListener("click", () => {
     if (confirm("Are you sure you want to clear your cart?")) {
         cart = [];
         saveCart();
-  }
+}
 });
 
 // Checkout
@@ -80,7 +80,7 @@ checkoutBtn.addEventListener("click", () => {
     if (cart.length === 0) {
         alert("Your cart is empty!");
         return;
-  }
+}
     alert("Proceeding to checkout...");
 });
 
@@ -99,7 +99,7 @@ function updateCartCount() {
 
 // Go back to shop when clicking the cart icon
 document.querySelector(".cart").addEventListener("click", () => {
-    window.location.href = "home.html";
+    window.location.href = "../index.html";
 });
 
 renderCart();
