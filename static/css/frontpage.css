@@ -580,7 +580,7 @@ a:hover {
         display: none;
     }
     .menu {
-        width: 80vw;
+        width: 100vw;
         height: calc(100vh - 10vh);
         position: fixed;
         top: 10vh;
@@ -634,7 +634,7 @@ a:hover {
     }
 
     .menu {
-        width: 80vw;
+        width: 100vw;
         height: calc(100vh - 10vh);
         border-radius: 0;
     }
@@ -694,7 +694,7 @@ a:hover {
     }
 
     .menu {
-        width: 80vw;
+        width: 100vw;
         height: calc(100vh - 10vh);
         border-radius: 0;
     }
