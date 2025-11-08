@@ -70,3 +70,52 @@
   width: 80%;
   border-radius: 8px;
 }
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90vw; 
+    padding: 1rem; 
+    border-radius: 8px;
+  }
+
+  .modal-content p {
+    font-size: 1.2rem;
+  }
+
+  .modal-content div label,
+  .modal-content div select {
+    font-size: 1rem;
+  }
+
+  .modal-content div input {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .modal-content button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .modal-content img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95vw;
+    padding: 0.8rem;
+  }
+
+  .modal-content p {
+    font-size: 1rem;
+  }
+
+  .modal-content button {
+    padding: 0.7rem;
+  }
+}
+
+

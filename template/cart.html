@@ -12,9 +12,12 @@
 <body>
     <header>
     <div class="header-image-div">
+        <div class="burger" id="burger">
+                <i class="fa fa-bars"></i>
+            </div>
         <img src="../static/uploads/images/1.png" class="logo" />
         <a href="/index.html" id="menutxt">
-                <h3>SIMPLICITY</h3>
+            <h3 class="title-header">SIMPLICITY</h3>
         </a>
     </div>
     <div class="header-title-div">
@@ -29,6 +32,24 @@
     </header>
 
   <hr/>
+    <div>
+            <div class="menu">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" name="searchInput" placeholder="Search...">
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+                <a href="/index.html" id="menutxt">Home</a>
+                <a href="" id="menutxt">About</a>
+                <a href="/template/cart.html" id="menutxt">Shop</a>
+
+                <video src="/static/uploads/videos/vid1.mp4" autoplay loop class="side-video-ad"></video>
+
+                <p class="txt">
+                    This year, follow the trends and purchase the items you can't live without. 
+                    Our clothing is made to be attractive, comfy, and trendy so you may look and feel great. Don't wait any longer, add to cart now!<br/>
+                </p>
+            </div>
+        </div>
 
     <main>
     <h1>Shopping Cart</h1>
@@ -50,5 +71,6 @@
 
     <script src="../static/js/modal.js"></script>
     <script src="../static/js/cart.js"></script>
+    <script src="../static/js/burger.js"></script>
 </body>
 </html>

@@ -61,18 +61,24 @@ header h3 {
     flex: 2;
 }
 
+
 .header-image-div {
-    margin-left: 40px;
+    margin-left: 0.5rem;
     display: flex;
     align-items: center;
     height: 100%;
     flex: 1;
 }
 
+.burger {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
 .logo {
     border-radius: 50%;
     margin-right: 1rem;
-    height: 80%;
+    height: 75%;
     width: auto;
 }
 
@@ -156,6 +162,84 @@ header h3 {
     border-radius: 8px;
 }
 
+/* Side Bar */
+.menu {
+    display: flex;
+    float: left;
+    width: 20vw;
+    text-align: center;
+    background-color: rgb(61, 61, 61);
+    box-shadow: 0 0 25px  rgba(0,0,0,0.50);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu a {
+    display: block;
+    margin-left: 0.5rem;
+    width: 75%;
+    padding: 0.6rem;
+    margin-top: 0.8rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+    box-shadow: 2px 2px 0 #171817;
+}
+
+.menu a:hover {
+    width: 90%;
+    transform: translateX(1px) translateY(1px);
+    box-shadow: 0 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+#menutxt{
+    font-size: 1rem;
+}
+
+.txt {
+    font-style: italic;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-style: dotted;
+    background-color: rgb(163, 162, 162);
+}
+
+#searchInput {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+.search-btn {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.5s;
+    text-decoration: none;
+    box-shadow: 2px 2px 0 #171817;
+}
+
+.search-btn:hover {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.side-video-ad {
+    background-color: rgb(61, 61, 61);
+    width: 100%;
+    height: 40%;
+    margin-top: 20px;
+}
+
 .item-info {
     flex: 1;
     margin-left: 20px;
@@ -230,4 +314,228 @@ header h3 {
 
 .info {
     text-align: center;
+}
+
+/* Sidebar adjustments for small screens */
+@media (max-width: 1440px) {
+    .burger {
+        display: block;
+    }
+
+    .menu-container {
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 30%;
+        height: 90vh;
+        padding-top: 2rem;
+    }
+
+    .menu {
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 30%;
+        background-color: rgb(61, 61, 61);
+        box-shadow: 5px 0 10px rgba(0,0,0,0.5);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 900;
+        display: none;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .menu a {
+        display: block;
+        margin-left: 0.5rem;
+        width: 75%;
+        padding: 0.6rem;
+        margin-top: 0.8rem;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5%;
+        cursor: pointer;
+        transition: 0.5s;
+        text-decoration: none;
+        box-shadow: 2px 2px 0 #171817;
+    }
+
+    .menu a:hover {
+        width: 90%;
+        transform: translateX(1px) translateY(1px);
+        box-shadow: 0 2px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    #menutxt{
+        font-size: 1rem;
+    }
+
+    .txt {
+        font-style: italic;
+        font-size: 1rem;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-style: dotted;
+        background-color: rgb(163, 162, 162);
+    }
+
+    #searchInput {
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        display: relative;
+    }
+
+    .search-btn {
+        padding: 0.5rem 1rem;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5%;
+        cursor: pointer;
+        font-size: 0.8rem;
+        transition: 0.5s;
+        text-decoration: none;
+        box-shadow: 2px 2px 0 #171817;
+    }
+
+    .search-btn:hover {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .side-video-ad {
+        background-color: rgb(61, 61, 61);
+        width: 100%;
+        height: 40%;
+        margin-top: 20px;
+    }
+}
+
+/* only 1024 and larger screens */
+@media (max-width: 1024px) {
+    .product-container {
+        gap: 0.8rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile landscape (768px and below) */
+@media (max-width: 768px) {
+    .title-header {
+        display: none;
+    }
+    
+    .product-container {
+        gap: 0.8rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+    .menu {
+        width: 50vw;
+        height: calc(100vh - 10vh);
+        overflow-y: auto;
+        position: fixed; 
+        top: 10vh; 
+        left: 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+}
+
+/* Phones and small tablets */
+@media (max-width: 768px) {
+    .title-header {
+        display: none;
+    }
+    .menu {
+        width: 80vw;
+        height: calc(100vh - 10vh);
+        position: fixed;
+        top: 10vh;
+        left: 0;
+        background-color: rgb(61, 61, 61);
+        box-shadow: 5px 0 10px rgba(0,0,0,0.5);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+    }
+
+    /* Hide sidebar-related things if not needed */
+    .side-video-ad {
+        display: none;
+    }
+    .menu a {
+        width: 90%;
+        margin: 0.5rem auto;
+        font-size: 1rem;
+    }
+
+    .search-btn {
+        width: 90%;
+    }
+
+    #searchInput {
+        width: 90%;
+    }
+}
+
+/* Extra small devices (below 480px) */
+@media (max-width: 480px) {
+    .title-header {
+        display: none;
+    }
+
+    .menu {
+        width: 100vw;
+        height: calc(100vh - 10vh);
+        border-radius: 0;
+    }
+
+    .menu a {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .txt {
+        font-size: 0.9rem;
+    }
 }
