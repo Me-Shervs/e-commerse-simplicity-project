@@ -101,6 +101,10 @@
 
 /* Mobile portrait (480px and below) */
 @media (max-width: 480px) {
+    .categories-container {
+        width: 80vw;
+    }
+
     .categories {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.6rem;
@@ -117,6 +121,10 @@
 
 /* Ultra-small screens (360px and below) */
 @media (max-width: 360px) {
+    .categories-container {
+        width: 80vw;
+    }
+    
     .categories {
         grid-template-columns: repeat(1, 1fr);
         gap: 0.5rem;
