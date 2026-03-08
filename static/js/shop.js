@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartIcon = document.getElementById("cartIcon");
   if (cartIcon) {
     cartIcon.addEventListener("click", () => {
-      window.location.href = "/e-commerse-simplicity-project/template/cart.html";
+      const base = window.location.origin + "/e-commerse-simplicity-project/";
+      window.location.href = base + "template/cart.html";
     });
   }
 
