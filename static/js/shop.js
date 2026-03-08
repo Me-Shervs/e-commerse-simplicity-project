@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (cartIcon) {
     cartIcon.addEventListener("click", () => {
       
-      window.location.href = `${window.location.origin}/template/cart.html`;
+      window.location.href = "../template/cart.html";
     });
   }
 
