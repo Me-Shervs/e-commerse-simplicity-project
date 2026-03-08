@@ -44,12 +44,20 @@ document.querySelectorAll(".add-to-cart").forEach(btn => {
 // Cart icon click
 document.addEventListener("DOMContentLoaded", () => {
   const cartIcon = document.getElementById("cartIcon");
-  if (cartIcon) {
+   if (cartIcon) {
     cartIcon.addEventListener("click", () => {
-      const base = window.location.origin + "/e-commerse-simplicity-project/";
-      window.location.href = base + "template/cart.html";
+
+      const path = window.location.pathname;
+
+      if (path.includes("/template/")) {
+        // already inside template folder
+        window.location.href = "cart.html";
+      } else {
+        // coming from index.html or root
+        window.location.href = "template/cart.html";
+      }
+
     });
   }
-
   updateCartCount();
 });
